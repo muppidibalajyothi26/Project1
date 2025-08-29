@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kimi HTML Tool</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    textarea, iframe {
+      width: 100%;
+      height: 300px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 10px;
+    }
+    button {
+      padding: 10px 15px;
+      margin-top: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h2>Kimi HTML Tool</h2>
+  <p>Write your HTML code below and click "Run" to preview:</p>
+
+  <textarea id="htmlCode" placeholder="Type your HTML code here..."></textarea>
+  <br>
+  <button onclick="runCode()">Run</button>
+
+  <h3>Output:</h3>
+  <iframe id="output"></iframe>
+
+  <script>
+    function runCode() {
+      let code = document.getElementById("htmlCode").value;
+      document.getElementById("output").srcdoc = code;
+    }
+  </script>
+</body>
+</html>
